@@ -1,10 +1,10 @@
-#include" main.h"
+#include "main.h"
 
 /**
- * _puts - print a string
+ * _puts - prints abstring
  * @str: string to be printed
  */
-void _puts(char *str)
+void  _puts(char *str)
 {
 	while (*str != '\0')
 	{
