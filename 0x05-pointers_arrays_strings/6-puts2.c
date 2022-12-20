@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * puts2 - function should print only one character out if two
  * @str: input
