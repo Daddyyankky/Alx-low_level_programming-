@@ -1,4 +1,4 @@
-nclude "main.h"
+#include "main.h"
 /**
  * factorial - factorial of int
  * @n:int
@@ -20,6 +20,6 @@ int factorial(int n)
 	{
 		x = n * factorial(n - 1);
 	}
-			return (x);
+	return (x);
 
 }
