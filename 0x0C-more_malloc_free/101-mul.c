@@ -1,40 +1,33 @@
 #include "main.h"
-#include <stdlib.h>
 
 /**
- * _realloc - reallocates a memory block using malloc and free.
- * @ptr: pointer to previously allocated memory
- * @old_size: size of allocated space for ptr
- * @new_size: size of newly allocated space
- *
- * Return: pointer to newly allocated memory, or NULL if failure
+ * main - multiplies two positive numbers
+ * @argc: n arguments
+ * @argv: args
+ * Return: int
  */
-void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
+int main(int argc, char *argv[])
 {
-	char *p;
-	unsigned int i, max = new_size;
-	char *oldp = ptr;
+	unsigned long mul;
+	int i, j;
 
-	if (ptr == NULL)
+	if (argc != 3)
 	{
-		p = malloc(new_size);
-		return (p);
+		printf("Error\n");
+		exit(98);
 	}
-	else if (new_size == 0)
+	for (i = 1; i < argc; i++)
 	{
-		free(ptr);
-		return (NULL);
+		for (j = 0; argv[i][j] != '\0'; j++)
+		{
+			if (argv[i][j] > 57 || argv[i][j] < 48)
+			{
+				printf("Error\n");
+				exit(98);
+			}
+		}
 	}
-	else if (new_size == old_size)
-		return (ptr);
-
-	p = malloc(new_size);
-	if (p == NULL)
-		return (NULL);
-	if (new_size > old_size)
-		max = old_size;
-	for (i = 0; i < max; i++)
-		p[i] = oldp[i];
-	free(ptr);
-	return (p);
+	mul = atol(argv[1]) * atol(argv[2]);
+	printf("%lu\n", mul);
+	return (0);
 }
