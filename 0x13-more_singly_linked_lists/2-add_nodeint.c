@@ -7,11 +7,11 @@
  *
  * Return: point to the new node, or NULL when if fails
  */
-listint_t *add_nodeint(listint_t **head, const int n);
+listint_t *add_nodeint(listint_t **head, const int n)
 {
 	listint_t *new;
 
-	new = malloc(sizeof(list_t));
+	new = malloc(sizeof(listint_t));
 	if (!new)
 		return (NULL);
 
