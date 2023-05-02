@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * add_modeint - adds the new node in the beginning of a linked list
+ * add_nodeint - adds the new node in the beginning of a linked list
  * @head: point to first node in the list
  * @n: data to be inserted in the new node
  *
